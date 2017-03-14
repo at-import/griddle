@@ -1,0 +1,33 @@
+{
+  "name": "sass-griddle",
+  "version": "1.0.0",
+  "description": "Simple set of Sass abstractions for CSS Grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Snugug/griddle.git"
+  },
+  "keywords": [
+    "sass",
+    "grid",
+    "css",
+    "grid",
+    "css-grid",
+    "singularity"
+  ],
+  "author": "Sam Richard <sam@snug.ug>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Snugug/griddle/issues"
+  },
+  "homepage": "https://github.com/Snugug/griddle#readme",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "nyc": "^10.1.2",
+    "sass-lint": "^1.10.2",
+    "sass-true": "^2.2.1"
+  }
+}
