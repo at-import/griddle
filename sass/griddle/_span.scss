@@ -1,17 +1,27 @@
-@mixin span($start, $span) {
-  grid-column: $start / span $span;
+@mixin span($span, $start: false) {
+  @if $start {
+    grid-column: $start / span $span;
+  }
+  @else {
+    grid-column: span $span;
+  }
 }
 
-@mixin column-span($start, $span) {
-  @include span($start, $span);
+@mixin column-span($span, $start: false) {
+  @include span($span, $start);
 }
 
 // ----
 
-@mixin vertical-span($start, $span) {
-  grid-row: $start / span $span;
+@mixin vertical-span($span, $start: false) {
+  @if $start {
+    grid-row: $start / span $span;
+  }
+  @else {
+    grid-row: span $span;
+  }
 }
 
-@mixin row-span($start, $span) {
-  @include vertical-span($start, $span);
+@mixin row-span($span, $start: false) {
+  @include vertical-span($span, $start);
 }
