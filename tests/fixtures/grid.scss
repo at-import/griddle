@@ -18,11 +18,41 @@
     }
   }
 
+  // Columns Mixin
+  @include test('columns [mixin]') {
+    @include assert('Outputs `grid-template-columns` and `grid-gap` based on input $grid and $gap') {
+      @include output {
+        @include columns(100px 1fr 2fr, 1em);
+      }
+
+      @include expect {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 100px 1fr 2fr;
+      }
+    }
+  }
+
   // Vertical Grid Mixin
   @include test('vertical-grid [mixin]') {
     @include assert('Outputs `grid-template-rows` and `grid-row-gap` based on input $grid and $gap') {
       @include output {
         @include vertical-grid(repeat(12, 1fr), 1em);
+      }
+
+      @include expect {
+        display: grid;
+        grid-row-gap: 1em;
+        grid-template-rows: repeat(12, 1fr);
+      }
+    }
+  }
+
+  // Rows Mixin
+  @include test('rows [mixin]') {
+    @include assert('Outputs `grid-template-rows` and `grid-row-gap` based on input $grid and $gap') {
+      @include output {
+        @include rows(repeat(12, 1fr), 1em);
       }
 
       @include expect {

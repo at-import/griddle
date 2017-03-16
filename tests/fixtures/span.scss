@@ -16,11 +16,37 @@
     }
   }
 
+  // Span Mixin
+  @include test('column-span [mixin]') {
+    @include assert('Outputs `grid-column` based on input $start and $span') {
+      @include output {
+        @include column-span(1, 3);
+      }
+
+      @include expect {
+        grid-column: 1/span 3; // sass-lint:disable-line space-around-operator
+      }
+    }
+  }
+
   // Vertical Span Mixin
   @include test('vertical-span [mixin]') {
     @include assert('Outputs `grid-row` based on input $start and $span') {
       @include output {
         @include vertical-span(1, 3);
+      }
+
+      @include expect {
+        grid-row: 1/span 3; // sass-lint:disable-line space-around-operator
+      }
+    }
+  }
+
+  // Row Span Mixin
+  @include test('row-span [mixin]') {
+    @include assert('Outputs `grid-row` based on input $start and $span') {
+      @include output {
+        @include row-span(1, 3);
       }
 
       @include expect {
