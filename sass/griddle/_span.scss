@@ -1,0 +1,7 @@
+@mixin span($start, $span) {
+  grid-column: $start / span $span;
+}
+
+@mixin vertical-span($start, $span) {
+  grid-row: $start / span $span;
+}
