@@ -36,6 +36,7 @@
   "homepage": "https://github.com/at-import/griddle#readme",
   "devDependencies": {
     "ava": "^0.18.2",
+    "eslint-config-punchcard": "^1.1.1",
     "eyeglass": "^1.2.1",
     "mocha": "^3.2.0",
     "node-sass": "^4.5.0",
