@@ -1,16 +1,26 @@
 {
   "name": "sass-griddle",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Simple set of Sass abstractions for CSS Grid",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "npm run lint",
+    "test": "mocha tests",
+    "lint": "eslint '**/*.js' && sass-lint 'sass/**/*.scss'",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "eyeglass": {
+    "sassDir": "sass",
+    "exports": "eyeglass-exports.js",
+    "name": "griddle",
+    "needs": "^1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Snugug/griddle.git"
+    "url": "https://github.com/at-import/griddle.git"
   },
   "keywords": [
+    "eyeglass-module",
     "sass",
     "grid",
     "css",
@@ -21,13 +31,28 @@
   "author": "Sam Richard <sam@snug.ug>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Snugug/griddle/issues"
+    "url": "https://github.com/at-import/griddle/issues"
   },
-  "homepage": "https://github.com/Snugug/griddle#readme",
+  "homepage": "https://github.com/at-import/griddle#readme",
   "devDependencies": {
     "ava": "^0.18.2",
+    "eyeglass": "^1.2.1",
+    "mocha": "^3.2.0",
+    "node-sass": "^4.5.0",
     "nyc": "^10.1.2",
+    "punchcard-commit-msg": "^1.1.0",
+    "punchcard-semantic-release": "^2.0.4",
     "sass-lint": "^1.10.2",
-    "sass-true": "^2.2.1"
+    "sass-true": "^2.2.1",
+    "semantic-release": "^6.3.2"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "punchcard-commit-msg"
+    }
+  },
+  "release": {
+    "analyzeCommits": "punchcard-semantic-release/analyze",
+    "generateNotes": "punchcard-semantic-release/notes"
   }
 }
