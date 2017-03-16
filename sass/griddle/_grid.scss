@@ -4,8 +4,18 @@
   grid-template-columns: $grid;
 }
 
+@mixin columns($grid, $gap) {
+  @include grid($grid, $gap);
+}
+
+// ----
+
 @mixin vertical-grid($grid, $gap) {
   display: grid;
   grid-row-gap: $gap;
   grid-template-rows: $grid;
+}
+
+@mixin rows($grid, $gap) {
+  @include vertical-grid($grid, $gap);
 }

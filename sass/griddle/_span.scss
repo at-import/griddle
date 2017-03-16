@@ -2,6 +2,16 @@
   grid-column: $start / span $span;
 }
 
+@mixin column-span($start, $span) {
+  @include span($start, $span);
+}
+
+// ----
+
 @mixin vertical-span($start, $span) {
   grid-row: $start / span $span;
+}
+
+@mixin row-span($start, $span) {
+  @include vertical-span($start, $span);
 }
