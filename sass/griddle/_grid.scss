@@ -1,11 +1,11 @@
 @mixin grid($grid, $gap) {
   display: grid;
-  grid-template-columns: $grid;
   grid-gap: $gap;
+  grid-template-columns: $grid;
 }
 
 @mixin vertical-grid($grid, $gap) {
   display: grid;
-  grid-template-rows: $grid;
   grid-row-gap: $gap;
+  grid-template-rows: $grid;
 }
