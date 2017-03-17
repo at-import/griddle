@@ -10,10 +10,12 @@ before_script:
   - npm prune
 after_success:
   - npm run semantic-release
+  - npm run reparo
 
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
+    - gh-pages
 
 notifications:
   email: false

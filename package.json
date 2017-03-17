@@ -7,7 +7,8 @@
     "pretest": "npm run lint",
     "test": "mocha tests",
     "lint": "eslint '**/*.js' && sass-lint -v -q",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "reparo": "reparo -b master"
   },
   "eyeglass": {
     "sassDir": "sass",
@@ -43,6 +44,7 @@
     "nyc": "^10.1.2",
     "punchcard-commit-msg": "^1.1.0",
     "punchcard-semantic-release": "^2.0.4",
+    "reparo": "^1.1.1-0",
     "sass-lint": "^1.10.2",
     "sass-true": "^2.2.1",
     "semantic-release": "^6.3.2"
